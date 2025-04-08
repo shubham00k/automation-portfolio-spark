@@ -176,12 +176,12 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-white">GitHub</h4>
                     <a 
-                      href="https://github.com/Shubhamkapse" 
+                      href="https://github.com/shubham00k" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-devops-gray-light hover:text-devops-teal"
                     >
-                      github.com/Shubhamkapse
+                      github.com/shubham00k
                     </a>
                   </div>
                 </div>

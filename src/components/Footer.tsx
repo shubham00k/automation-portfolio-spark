@@ -22,7 +22,7 @@ const Footer = () => {
           
           <div className="flex space-x-6">
             <a
-              href="https://github.com/Shubhamkapse"
+              href="https://github.com/shubham00k"
               target="_blank"
               rel="noopener noreferrer"
               className="text-devops-gray-light hover:text-devops-teal transition-colors"
