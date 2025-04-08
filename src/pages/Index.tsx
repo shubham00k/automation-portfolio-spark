@@ -8,13 +8,8 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  React.useEffect(() => {
-    // Force dark mode
-    document.documentElement.classList.add('dark');
-  }, []);
-  
   return (
-    <div className="min-h-screen dark">
+    <div className="min-h-screen">
       <Navbar />
       <main>
         <Hero />

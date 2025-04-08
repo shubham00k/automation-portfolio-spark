@@ -148,10 +148,10 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-devops-blue-dark dark:text-white">Email</h4>
                     <a 
-                      href="mailto:shubhamkapse193@gmail.com"
+                      href="mailto:your.email@example.com"
                       className="text-gray-600 dark:text-devops-gray-light hover:text-blue-600 dark:hover:text-devops-teal"
                     >
-                      shubhamkapse193@gmail.com
+                      your.email@example.com
                     </a>
                   </div>
                 </div>
@@ -161,12 +161,12 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-devops-blue-dark dark:text-white">LinkedIn</h4>
                     <a 
-                      href="https://linkedin.com/in/shubhamkapse" 
+                      href="https://linkedin.com/in/yourprofile" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-gray-600 dark:text-devops-gray-light hover:text-blue-600 dark:hover:text-devops-teal"
                     >
-                      linkedin.com/in/shubhamkapse
+                      linkedin.com/in/yourprofile
                     </a>
                   </div>
                 </div>
@@ -176,12 +176,12 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-devops-blue-dark dark:text-white">GitHub</h4>
                     <a 
-                      href="https://github.com/shubhamkapse" 
+                      href="https://github.com/yourusername" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-gray-600 dark:text-devops-gray-light hover:text-blue-600 dark:hover:text-devops-teal"
                     >
-                      github.com/shubhamkapse
+                      github.com/yourusername
                     </a>
                   </div>
                 </div>

@@ -12,7 +12,7 @@ const Hero = () => {
             <div>
               <p className="text-blue-600 dark:text-devops-teal font-semibold mb-2">Hello, my name is</p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-devops-blue-dark dark:text-devops-gray-light mb-2">
-                Shubham Kapse
+                Jane Doe
               </h1>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-devops-gray-dark dark:text-devops-gray-dark">
                 DevOps Engineer & Cloud Architect
