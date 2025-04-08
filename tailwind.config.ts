@@ -19,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Space Grotesk', 'sans-serif']
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -107,9 +111,6 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-in-out',
 				'slide-up': 'slide-up 0.6s ease-in-out'
-			},
-			fontFamily: {
-				sans: ['Inter', 'sans-serif']
 			}
 		}
 	},

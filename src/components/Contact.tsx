@@ -62,7 +62,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-gray-50 dark:bg-devops-blue-light py-20">
+    <section id="contact" className="bg-devops-blue-light py-20">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="section-title">Contact Me</h2>
@@ -71,8 +71,8 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <div className="bg-white dark:bg-devops-blue-dark rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-6 text-devops-blue-dark dark:text-devops-teal">
+            <div className="bg-devops-blue-dark rounded-lg p-6 shadow-md">
+              <h3 className="text-xl font-semibold mb-6 text-devops-teal">
                 Get In Touch
               </h3>
               
@@ -126,7 +126,7 @@ const Contact = () => {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-devops-teal dark:text-devops-blue-dark dark:hover:bg-blue-400"
+                    className="w-full bg-devops-teal text-devops-blue-dark hover:bg-blue-400"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
@@ -137,60 +137,60 @@ const Contact = () => {
           </div>
           
           <div>
-            <div className="bg-white dark:bg-devops-blue-dark rounded-lg p-6 shadow-md h-full">
-              <h3 className="text-xl font-semibold mb-6 text-devops-blue-dark dark:text-devops-teal">
+            <div className="bg-devops-blue-dark rounded-lg p-6 shadow-md h-full">
+              <h3 className="text-xl font-semibold mb-6 text-devops-teal">
                 Contact Information
               </h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <Mail className="w-5 h-5 mt-1 mr-3 text-blue-600 dark:text-devops-teal" />
+                  <Mail className="w-5 h-5 mt-1 mr-3 text-devops-teal" />
                   <div>
-                    <h4 className="font-medium text-devops-blue-dark dark:text-white">Email</h4>
+                    <h4 className="font-medium text-white">Email</h4>
                     <a 
-                      href="mailto:your.email@example.com"
-                      className="text-gray-600 dark:text-devops-gray-light hover:text-blue-600 dark:hover:text-devops-teal"
+                      href="mailto:shubhamkapse193@gmail.com"
+                      className="text-devops-gray-light hover:text-devops-teal"
                     >
-                      your.email@example.com
+                      shubhamkapse193@gmail.com
                     </a>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <Linkedin className="w-5 h-5 mt-1 mr-3 text-blue-600 dark:text-devops-teal" />
+                  <Linkedin className="w-5 h-5 mt-1 mr-3 text-devops-teal" />
                   <div>
-                    <h4 className="font-medium text-devops-blue-dark dark:text-white">LinkedIn</h4>
+                    <h4 className="font-medium text-white">LinkedIn</h4>
                     <a 
-                      href="https://linkedin.com/in/yourprofile" 
+                      href="https://www.linkedin.com/in/shubhamkapse193" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-devops-gray-light hover:text-blue-600 dark:hover:text-devops-teal"
+                      className="text-devops-gray-light hover:text-devops-teal"
                     >
-                      linkedin.com/in/yourprofile
+                      linkedin.com/in/shubhamkapse193
                     </a>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <Github className="w-5 h-5 mt-1 mr-3 text-blue-600 dark:text-devops-teal" />
+                  <Github className="w-5 h-5 mt-1 mr-3 text-devops-teal" />
                   <div>
-                    <h4 className="font-medium text-devops-blue-dark dark:text-white">GitHub</h4>
+                    <h4 className="font-medium text-white">GitHub</h4>
                     <a 
-                      href="https://github.com/yourusername" 
+                      href="https://github.com/Shubhamkapse" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-devops-gray-light hover:text-blue-600 dark:hover:text-devops-teal"
+                      className="text-devops-gray-light hover:text-devops-teal"
                     >
-                      github.com/yourusername
+                      github.com/Shubhamkapse
                     </a>
                   </div>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-gray-200 dark:border-gray-700">
-                  <p className="text-gray-600 dark:text-devops-gray-light">
-                    I'm currently available for freelance work and full-time opportunities. If you're 
-                    looking to improve your DevOps practices or need help with cloud infrastructure, 
-                    I'd love to hear from you!
+                <div className="pt-6 mt-6 border-t border-gray-700">
+                  <p className="text-devops-gray-light">
+                    I'm currently available for freelance work and full-time DevOps opportunities. If you're 
+                    looking to improve your infrastructure, automation pipelines, or need help with cloud 
+                    architecture, I'd love to hear from you!
                   </p>
                 </div>
               </div>

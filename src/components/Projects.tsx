@@ -6,66 +6,47 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Kubernetes Monitoring Stack",
-      description: "Implemented a comprehensive monitoring solution for Kubernetes clusters using Prometheus, Grafana, and Alertmanager with customizable dashboards and alerting.",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-      tags: ["Kubernetes", "Prometheus", "Grafana", "Helm"],
-      githubUrl: "https://github.com/yourusername/k8s-monitoring",
-      liveUrl: "https://monitoring-demo.example.com"
+      title: "Web Server Deployment & Configuration using Ansible",
+      description: "Automated Nginx/Apache setup and configuration on AWS EC2 instances. Implemented templates, handlers, and idempotent configurations for reliable deployments.",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      tags: ["Ansible", "AWS", "Nginx", "Apache", "EC2"],
+      githubUrl: "https://github.com/Shubhamkapse/ansible-web-server",
     },
     {
       id: 2,
-      title: "Infrastructure as Code Framework",
-      description: "Developed a modular Terraform framework for provisioning consistent multi-environment AWS infrastructure with built-in security controls and compliance checks.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      tags: ["Terraform", "AWS", "IaC", "CI/CD"],
-      githubUrl: "https://github.com/yourusername/terraform-framework",
+      title: "Service Management Automation on EC2 using Ansible",
+      description: "Managed services like SSH, Apache, and firewall using Ansible playbooks. Created role-based architecture with dynamic inventory for scalability.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      tags: ["Ansible", "AWS", "Service Management", "EC2", "Playbooks"],
+      githubUrl: "https://github.com/Shubhamkapse/ansible-service-management",
     },
     {
       id: 3,
-      title: "CI/CD Pipeline Automation",
-      description: "Created a robust CI/CD pipeline using GitHub Actions that automates testing, security scanning, and deployment across multiple environments.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      tags: ["GitHub Actions", "Docker", "Testing", "Security"],
-      githubUrl: "https://github.com/yourusername/cicd-pipelines",
-      liveUrl: "https://pipeline-docs.example.com"
+      title: "Terraform Infrastructure as Code Deployment",
+      description: "Provisioned AWS infrastructure using modular Terraform with remote state in S3. Implemented best practices for security, scaling, and resource management.",
+      image: "https://images.unsplash.com/photo-1505238680356-667803448bb6",
+      tags: ["Terraform", "AWS", "IaC", "S3", "Remote State"],
+      githubUrl: "https://github.com/Shubhamkapse/terraform-aws-infrastructure",
     },
     {
       id: 4,
-      title: "Cloud Cost Optimization Tool",
-      description: "Built a tool that analyzes AWS resource usage and provides recommendations for cost savings through rightsizing and reserved instance planning.",
+      title: "LAMP Stack Deployment on EC2 using Bash Scripting",
+      description: "Automated full-stack deployment with Linux, Apache, MySQL, and PHP. Created robust error handling and parameterized configurations for flexibility.",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      tags: ["Python", "AWS", "Cost Optimization", "Data Analysis"],
-      githubUrl: "https://github.com/yourusername/cloud-cost-optimizer",
-    },
-    {
-      id: 5,
-      title: "Serverless Microservices Platform",
-      description: "Designed and implemented a serverless architecture for microservices using AWS Lambda, API Gateway, and DynamoDB with full CI/CD automation.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-      tags: ["Serverless", "AWS Lambda", "Microservices", "DynamoDB"],
-      githubUrl: "https://github.com/yourusername/serverless-platform",
-      liveUrl: "https://api.serverless-demo.example.com"
-    },
-    {
-      id: 6,
-      title: "Configuration Management System",
-      description: "Built an Ansible-based configuration management system with role-based architecture and integration with secret management tools.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      tags: ["Ansible", "Configuration Management", "Security", "Automation"],
-      githubUrl: "https://github.com/yourusername/ansible-config-mgmt",
+      tags: ["Bash", "AWS", "LAMP", "EC2", "Automation"],
+      githubUrl: "https://github.com/Shubhamkapse/lamp-stack-automation",
     }
   ];
 
   return (
-    <section id="projects" className="bg-white dark:bg-devops-blue-dark py-20">
+    <section id="projects" className="bg-devops-blue-dark py-20">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="section-title">Projects</h2>
-          <p className="section-subtitle">Check out some of my recent work</p>
+          <p className="section-subtitle">Check out my DevOps portfolio</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="animate-fade-in" style={{ animationDelay: `${project.id * 150}ms` }}>
               <ProjectCard
@@ -74,7 +55,6 @@ const Projects = () => {
                 image={project.image}
                 tags={project.tags}
                 githubUrl={project.githubUrl}
-                liveUrl={project.liveUrl}
               />
             </div>
           ))}

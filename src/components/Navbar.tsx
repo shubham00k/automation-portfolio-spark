@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Github } from 'lucide-react';
+import { Menu, X, Github, Infinity } from 'lucide-react';
 
 const navLinks = [
   { title: "Home", href: "#home" },
@@ -34,15 +34,23 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 dark:bg-devops-blue-dark/90 shadow-md backdrop-blur-sm' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-devops-blue-dark/90 shadow-md backdrop-blur-sm' : 'bg-transparent'}`}>
       <nav className="container-custom flex items-center justify-between py-4">
-        <a href="#home" className="flex items-center space-x-2 text-xl md:text-2xl font-bold text-devops-blue-dark dark:text-white">
-          <img 
-            src="/lovable-uploads/37275159-3899-439c-8730-db82940c83b7.png" 
-            alt="DevOpsPro Logo" 
-            className="h-10 w-10" 
-          />
-          <span>DevOps<span className="text-blue-500">Pro</span></span>
+        <a href="#home" className="flex items-center space-x-3 text-xl md:text-2xl font-bold text-white">
+          <div className="relative flex items-center">
+            <img 
+              src="/lovable-uploads/37275159-3899-439c-8730-db82940c83b7.png" 
+              alt="Pegasus DevOps Logo" 
+              className="h-14 w-14" 
+            />
+            <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-devops-teal opacity-80">
+              <Infinity className="h-7 w-7" />
+            </span>
+          </div>
+          <div className="flex flex-col">
+            <span className="text-base md:text-xl text-devops-gray-light">DevOps<span className="text-devops-teal">Pro</span></span>
+            <span className="text-xs md:text-sm text-devops-gray-dark font-normal">DevOps Power. Pegasus Speed.</span>
+          </div>
         </a>
 
         {/* Desktop Navigation */}
@@ -52,7 +60,7 @@ export default function Navbar() {
               <li key={link.title}>
                 <a 
                   href={link.href} 
-                  className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-devops-teal transition-colors"
+                  className="text-gray-300 hover:text-devops-teal transition-colors"
                 >
                   {link.title}
                 </a>
@@ -60,10 +68,10 @@ export default function Navbar() {
             ))}
           </ul>
           <a 
-            href="https://github.com/yourusername" 
+            href="https://github.com/Shubhamkapse" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-devops-teal"
+            className="inline-flex items-center text-gray-300 hover:text-devops-teal"
           >
             <Github className="h-5 w-5" />
           </a>
@@ -71,7 +79,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-gray-700 dark:text-gray-300" 
+          className="md:hidden text-gray-300" 
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -81,14 +89,14 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-devops-blue-dark shadow-lg">
+        <div className="md:hidden bg-devops-blue-dark shadow-lg">
           <div className="container-custom py-4">
             <ul className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <li key={link.title}>
                   <a 
                     href={link.href} 
-                    className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-devops-teal block py-1"
+                    className="text-gray-300 hover:text-devops-teal block py-1"
                     onClick={toggleMenu}
                   >
                     {link.title}
@@ -97,10 +105,10 @@ export default function Navbar() {
               ))}
               <li>
                 <a 
-                  href="https://github.com/yourusername" 
+                  href="https://github.com/Shubhamkapse" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-devops-teal"
+                  className="inline-flex items-center space-x-2 text-gray-300 hover:text-devops-teal"
                   onClick={toggleMenu}
                 >
                   <Github className="h-5 w-5" />
