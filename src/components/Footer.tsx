@@ -9,7 +9,12 @@ const Footer = () => {
     <footer className="bg-white dark:bg-devops-blue-dark py-8">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
+          <div className="flex items-center space-x-2 mb-4 md:mb-0">
+            <img 
+              src="/lovable-uploads/37275159-3899-439c-8730-db82940c83b7.png" 
+              alt="DevOpsPro Logo" 
+              className="h-8 w-8" 
+            />
             <p className="text-gray-600 dark:text-devops-gray-light">
               © {currentYear} DevOpsPro. All rights reserved.
             </p>

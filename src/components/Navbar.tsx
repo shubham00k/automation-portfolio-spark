@@ -36,8 +36,13 @@ export default function Navbar() {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 dark:bg-devops-blue-dark/90 shadow-md backdrop-blur-sm' : 'bg-transparent'}`}>
       <nav className="container-custom flex items-center justify-between py-4">
-        <a href="#home" className="text-xl md:text-2xl font-bold text-devops-blue-dark dark:text-white">
-          DevOps<span className="text-blue-500">Pro</span>
+        <a href="#home" className="flex items-center space-x-2 text-xl md:text-2xl font-bold text-devops-blue-dark dark:text-white">
+          <img 
+            src="/lovable-uploads/37275159-3899-439c-8730-db82940c83b7.png" 
+            alt="DevOpsPro Logo" 
+            className="h-10 w-10" 
+          />
+          <span>DevOps<span className="text-blue-500">Pro</span></span>
         </a>
 
         {/* Desktop Navigation */}
