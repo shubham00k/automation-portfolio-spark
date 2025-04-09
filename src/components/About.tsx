@@ -1,17 +1,9 @@
-
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Server, Database, Globe, Code, Terminal } from "lucide-react";
-
 const About = () => {
-  const skills = [
-    "AWS", "Azure", "GCP", "Docker", "Kubernetes", 
-    "Terraform", "Ansible", "Jenkins", "GitHub Actions", 
-    "Python", "Bash", "Golang", "Prometheus", "Grafana", "ELK Stack"
-  ];
-
-  return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-devops-blue-dark">
+  const skills = ["AWS", "Azure", "GCP", "Docker", "Kubernetes", "Terraform", "Ansible", "Jenkins", "GitHub Actions", "Python", "Bash", "Golang", "Prometheus", "Grafana", "ELK Stack"];
+  return <section id="about" className="py-20 bg-gray-50 dark:bg-devops-blue-dark">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="section-title">About Me</h2>
@@ -20,17 +12,8 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
-            <p className="text-gray-700 dark:text-devops-gray-light">
-              With over 6 years of experience in DevOps and cloud infrastructure, I help organizations build 
-              reliable, scalable, and secure systems. I'm passionate about automation, infrastructure as code, 
-              and creating efficient CI/CD pipelines that enable teams to deliver software with confidence.
-            </p>
-            <p className="text-gray-700 dark:text-devops-gray-light">
-              My approach combines technical expertise with a deep understanding of development workflows 
-              to create solutions that truly enhance productivity and system reliability. I've worked with 
-              startups and enterprise organizations across various industries, helping them modernize their 
-              infrastructure and adopt DevOps practices.
-            </p>
+            <p className="text-gray-700 dark:text-devops-gray-light">Hey! I’m Shubham Kapse, a fresher deeply passionate about DevOps, Linux, and automation. I’ve always been curious about how systems work under the hood, and that curiosity led me to explore the world of cloud infrastructure, scripting, and CI/CD.</p>
+            <p className="text-gray-700 dark:text-devops-gray-light">While I may not have industry experience yet, I’ve built multiple hands-on projects involving AWS, Ansible, Terraform, Bash scripting, and GitHub Actions. These projects helped me understand real-world challenges like automating web server deployments, managing cloud infrastructure as code, and integrating DevOps workflows.</p>
             <p className="text-gray-700 dark:text-devops-gray-light">
               I'm constantly learning and experimenting with new tools and techniques to stay at the forefront 
               of cloud-native technologies and automation frameworks.
@@ -106,8 +89,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
