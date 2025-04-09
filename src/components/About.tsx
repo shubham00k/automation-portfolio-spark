@@ -6,7 +6,7 @@ const About = () => {
   return <section id="about" className="py-20 bg-gray-50 dark:bg-devops-blue-dark">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="section-title">About Me</h2>
+          <h2 className="section-title">I'm constantly learning and experimenting with new tools and techniques to stay at the forefront of cloud-native technologies and automation frameworks. I enjoy working in terminal environments, solving problems efficiently, and constantly learning new tools that make infrastructure more robust and scalable. My goal is to keep growing, contribute meaningfully to tech teams, and become a reliable DevOps engineer.</h2>
           <p className="section-subtitle">Learn more about my background and expertise</p>
         </div>
 
