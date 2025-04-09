@@ -1,13 +1,5 @@
-
 import React, { useState } from "react";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -16,53 +8,45 @@ import { Mail, Github, Linkedin } from "lucide-react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
 const contactSchema = z.object({
   name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+    message: "Name must be at least 2 characters."
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: "Please enter a valid email address."
   }),
   message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
-  }),
+    message: "Message must be at least 10 characters."
+  })
 });
-
 type ContactFormValues = z.infer<typeof contactSchema>;
-
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
       name: "",
       email: "",
-      message: "",
-    },
+      message: ""
+    }
   });
-
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    
+
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
+    await new Promise(resolve => setTimeout(resolve, 1000));
     console.log("Form data:", data);
-    
     toast({
       title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
+      description: "Thanks for reaching out. I'll get back to you soon."
     });
-    
     form.reset();
     setIsSubmitting(false);
   };
-
-  return (
-    <section id="contact" className="bg-devops-blue-light py-20">
+  return <section id="contact" className="bg-devops-blue-light py-20">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="section-title">Contact Me</h2>
@@ -78,57 +62,37 @@ const Contact = () => {
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Name</FormLabel>
+                  <FormField control={form.control} name="name" render={({
+                  field
+                }) => <FormItem>
+                        <FormLabel className="change color to white ">Name</FormLabel>
                         <FormControl>
                           <Input placeholder="Your name" {...field} />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                      </FormItem>} />
                   
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
+                  <FormField control={form.control} name="email" render={({
+                  field
+                }) => <FormItem>
                         <FormLabel>Email</FormLabel>
                         <FormControl>
                           <Input placeholder="Your email address" {...field} />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                      </FormItem>} />
                   
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
+                  <FormField control={form.control} name="message" render={({
+                  field
+                }) => <FormItem>
                         <FormLabel>Message</FormLabel>
                         <FormControl>
-                          <Textarea
-                            placeholder="How can I help you?"
-                            className="min-h-[120px]"
-                            {...field}
-                          />
+                          <Textarea placeholder="How can I help you?" className="min-h-[120px]" {...field} />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                      </FormItem>} />
                   
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-devops-teal text-devops-blue-dark hover:bg-blue-400"
-                    disabled={isSubmitting}
-                  >
+                  <Button type="submit" className="w-full bg-devops-teal text-devops-blue-dark hover:bg-blue-400" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
@@ -147,10 +111,7 @@ const Contact = () => {
                   <Mail className="w-5 h-5 mt-1 mr-3 text-devops-teal" />
                   <div>
                     <h4 className="font-medium text-white">Email</h4>
-                    <a 
-                      href="mailto:shubhamkapse193@gmail.com"
-                      className="text-devops-gray-light hover:text-devops-teal"
-                    >
+                    <a href="mailto:shubhamkapse193@gmail.com" className="text-devops-gray-light hover:text-devops-teal">
                       shubhamkapse193@gmail.com
                     </a>
                   </div>
@@ -160,12 +121,7 @@ const Contact = () => {
                   <Linkedin className="w-5 h-5 mt-1 mr-3 text-devops-teal" />
                   <div>
                     <h4 className="font-medium text-white">LinkedIn</h4>
-                    <a 
-                      href="https://www.linkedin.com/in/shubhamkapse193" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-devops-gray-light hover:text-devops-teal"
-                    >
+                    <a href="https://www.linkedin.com/in/shubhamkapse193" target="_blank" rel="noopener noreferrer" className="text-devops-gray-light hover:text-devops-teal">
                       linkedin.com/in/shubhamkapse193
                     </a>
                   </div>
@@ -175,12 +131,7 @@ const Contact = () => {
                   <Github className="w-5 h-5 mt-1 mr-3 text-devops-teal" />
                   <div>
                     <h4 className="font-medium text-white">GitHub</h4>
-                    <a 
-                      href="https://github.com/shubham00k" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-devops-gray-light hover:text-devops-teal"
-                    >
+                    <a href="https://github.com/shubham00k" target="_blank" rel="noopener noreferrer" className="text-devops-gray-light hover:text-devops-teal">
                       github.com/shubham00k
                     </a>
                   </div>
@@ -198,8 +149,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
