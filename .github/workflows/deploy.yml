@@ -27,5 +27,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: shubham003/shubham-portfolio:v1
- 
+        tags: shubhamkapse003/shubham-portfolio:v1
+
